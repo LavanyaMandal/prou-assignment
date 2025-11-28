@@ -144,11 +144,11 @@ One-to-many = Employee → Tasks
 
 ### Future Enhancements
 ```
-Idea	Description
-Authentication	JWT login system
-Role-based access	HR privilege system
-Analytics	Pie charts for task status
-Kanban Board	Drag & drop task flow
-Calendar View	Task deadline timeline
-Deployment	Netlify + Render
+Idea	              Description
+Authentication	      JWT login system
+Role-based access	  HR privilege system
+Analytics	          Pie charts for task status
+Kanban Board	      Drag & drop task flow
+Calendar View	      Task deadline timeline
+Deployment	          Netlify + Render
 ```
