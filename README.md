@@ -1,68 +1,55 @@
-# HR Management System – Employee & Task Management Dashboard
+# 🧑‍💼 HR Management System – Employee & Task Dashboard
 
-This project is submitted for **Prou Assignment – Track 1, Track 2 & Track 3**:
-
-- **Track 1 – Frontend (Mock Data)**
-- **Track 2 – Backend (API + MongoDB Database)**
-- **Track 3 – Fullstack (React + API + Database)**
-
-> **Common Problem Statement:**  
-> Build an **Employee + Task Management System (HR Dashboard)** that supports employee CRUD, task allocation, cloud database storage, search functionality, and a modern web UI.  
-> The same domain is implemented in **three different ways** as per the assignment requirements.
+This project is submitted for **Prou Assignment – Track 1, Track 2 & Track 3**.
 
 ---
 
-## 🚀 Features Overview
+## 📌 Tracks Covered
 
-| Track      | Technologies Used                      | What Was Built                                         |
-|------------|-----------------------------------------|--------------------------------------------------------|
-| **Track 1** | HTML, CSS, JavaScript                  | Frontend with mock JSON data (no DB)                  |
-| **Track 2** | Node.js, Express.js, MongoDB Atlas     | REST API with real database CRUD                      |
-| **Track 3** | React + Express + MongoDB              | Fully functional fullstack dashboard                  |
+| Track | Technology | Description |
+|------|------------|-------------|
+| **Track 1** | HTML, CSS, JavaScript | Frontend with mock JSON data (no DB) |
+| **Track 2** | Node.js, Express, MongoDB | REST API + Cloud Database CRUD |
+| **Track 3** | React + Express + MongoDB | Fully functional fullstack dashboard |
 
 ---
 
-## 🧠 Problem Statement
+## 🧠 Problem Statement  
 
-Many basic employee management websites only display static records and charge for premium features like task allocation, search, cloud storage, and CRUD operations.
+Most basic HR dashboards only show static data and charge money for premium features like:
+- Cloud database
+- Live task allocation  
+- Search + filtering  
+- CRUD operations  
 
-**This project provides a free fullstack implementation** with the following capabilities:
+➡️ **This project solves that issue** by giving a **FREE & fully working fullstack system**.
 
-✔ Employee Management  
-✔ Task Management with Status & Assignment  
-✔ MongoDB Atlas cloud integration  
-✔ Live search filtering  
-✔ Responsive, dashboard-style UI  
+✔ Employee management  
+✔ Task assignment  
+✔ MongoDB Atlas (cloud DB)  
+✔ Modern & responsive UI  
+✔ Live filtering + CRUD  
 
 ---
 
 ## 🧱 Tech Stack
 
-### 🟦 Track 1 – Frontend (Mock)
+### 🔹 **Frontend – Track 1**
+- HTML5, CSS3, JavaScript  
+- Mock JSON data  
+- No backend / No database
 
-- HTML5, CSS3, Vanilla JavaScript  
-- In-memory mock JSON  
-- No backend / No database  
-- Basic employee table simulation
-
-### 🟨 Track 2 – Backend API
-
+### 🔸 **Backend – Track 2**
 - Node.js + Express.js  
-- MongoDB Atlas (Cloud)  
+- MongoDB Atlas (cloud DB)  
 - Mongoose ODM  
-- CRUD REST APIs for:
-  - Employees
-  - Tasks  
-- `.env` used & secured with `.gitignore`
+- `.env` secured using `.gitignore`
 
-### 🟩 Track 3 – Fullstack
-
-- React (Vite Setup)  
-- Integration with Track 2 backend API  
-- Glassmorphism UI, hover effects, animations  
-- Live search for employees  
-- Task assignment & status badges  
-- Clean component-based React design
+### 🟢 **Fullstack – Track 3**
+- React (Vite setup)  
+- API Integration (Axios)  
+- Glassmorphism UI + Animations  
+- Status Badges + Live Search
 
 ---
 
@@ -70,141 +57,114 @@ Many basic employee management websites only display static records and charge f
 
 ```text
 prou-assignment/
-├── track1-frontend-mock/          # Track 1 – HTML/CSS/JS (mock data)
+├── track1-frontend-mock/
 │   ├── index.html
 │   ├── style.css
 │   └── script.js
 │
-├── track2-backend-api/            # Track 2 – Express API + MongoDB
+├── track2-backend-api/
 │   ├── server.js
 │   ├── models/
-│   │   ├── Employee.js
-│   │   └── Task.js
 │   ├── routes/
-│   │   ├── employeeRoutes.js
-│   │   └── taskRoutes.js
-│   ├── .env        # NOT committed (secured)
+│   ├── .env      # NOT committed (secured)
 │   └── package.json
 │
-└── track3-frontend-fullstack/     # Track 3 – React App (Fullstack)
+└── track3-frontend-fullstack/
     ├── src/
     │   ├── App.jsx
     │   └── index.css
     └── package.json
+```
 
 
-🛠️ Setup Instructions
-▶ Track 2 – Backend (API + DB)
+### Setup Instructions
+```
+▶ Track 2 – Backend API
 cd track2-backend-api
 npm install
 npm start
 
-
-Should show:
+Output expected:
 
 Server running on port 5000
 MongoDB connected
 
-▶ Track 3 – Fullstack (React + API + MongoDB Atlas)
+▶ Track 3 – Fullstack React App
 cd track3-frontend-fullstack
 npm install
 npm run dev
 
-
 Open in browser:
 
 http://localhost:5173/
+```
 
 
-▶ Flow to Test
-
-Add Employee → Table updates
-
-Add Task → Assign to employee
-
-LIVE search by name, role, email
-
-MongoDB Atlas → Collections updated in real-time
-
-📡 API Endpoints (Track 2)
-Employees — /api/employees
+### API Routes (Track 2)
+```
+Employees – /api/employees
 Method	Endpoint	Description
 GET	/api/employees	Get all employees
 POST	/api/employees	Create employee
 PUT	/api/employees/:id	Update employee
 DELETE	/api/employees/:id	Delete employee
-Tasks — /api/tasks
+Tasks – /api/tasks
 Method	Endpoint	Description
 GET	/api/tasks	Get all tasks
 POST	/api/tasks	Create task
-PUT	/api/tasks/:id	Update task / status
+PUT	/api/tasks/:id	Update task
 DELETE	/api/tasks/:id	Delete task
-📸 Screenshots
+```
 
-Screenshots included in a separate folder: /screenshots
 
-Fullstack Dashboard (React + API)
+### Screenshots
+```
 
-dashboard-ui.png
+### 🟢 Dashboard Preview
+![Dashboard UI](./Screenshot/dashboard.png)
 
-Backend Running
+### 👥 Employees Management
+![Employees Page](./Screenshot/employees.png)
 
-backend-connected.png
+### 📋 Tasks Management
+![Tasks Page](./Screenshot/tasks.png)
 
-MongoDB Collections
+```
 
-employees-collection.png
-tasks-collection.png
 
-Track 1 Mock Frontend
-
-track1-mock-ui.png
-
-💡 Unique / Bonus Features
-
-✔ 3 Tracks successfully implemented
-✔ Clean folder structure
-✔ Cloud DB – no local setup needed
-✔ Responsive + animated UI
-✔ Employee search bar
-✔ Task assignment & CRUD
-✔ .env secured using .gitignore
-
-🧠 Assumptions
-
+### Assumptions
+```
 No authentication required
 
-Single organization use case
-
-Minimal frontend validation
+Single organization usage
 
 JSON-only API responses
 
-🚀 Future Enhancements
-Feature Idea	Description
-Authentication	JWT-based login system
-Role-based access	HR vs Employee permissions
-Task analytics	Pie charts for status distribution
-Calendar timeline	Deadline-based task view
-Kanban board	Drag & drop task workflow
-Deployment	Netlify + Render / Railway
-🧾 Final Summary
+Basic frontend validation
 
-This project satisfies ALL required tracks:
+One-to-many = Employee → Tasks
+```
 
-✔ Track 1 – Frontend (Mock Data)
-✔ Track 2 – Backend (API + DB)
-✔ Track 3 – Fullstack Integrated Web App
-
-It demonstrates:
-
-Fullstack integration with MongoDB
-
-Modular code architecture
-
-Professional animated dashboard UI
-
-Complete CRUD functionality
+### Bonus Features
+```
+✔ Light / Dark Mode
+✔ Search + Filter
+✔ Status Tags with Colors
+✔ Modal-based Add/Edit Forms
+✔ React State-Based Storage
+✔ Animated Glassmorphism UI
+✔ Cloud Database – MongoDB Atlas
+✔ Deployed Version (optional)
+```
 
 
-
+### Future Enhancements
+```
+Idea	Description
+Authentication	JWT login system
+Role-based access	HR privilege system
+Analytics	Pie charts for task status
+Kanban Board	Drag & drop task flow
+Calendar View	Task deadline timeline
+Deployment	Netlify + Render
+```
