@@ -117,20 +117,19 @@ DELETE	/api/tasks/:id	Delete task
 ```
 
 
-### Screenshots
+## 📸 Project Screenshots
 ```
 
-### 🟢 Dashboard Preview
+### 🟢 Dashboard Preview  
 ![Dashboard](./screenshots/Dashboard.png)
 
-### 👥 Employees Management
+### 👥 Employees Management  
 ![Employees](./screenshots/Employees.png)
 
-### 📋 Tasks Management
+### 📋 Tasks Management  
 ![Tasks](./screenshots/Tasks.png)
 
 ```
-
 
 ### Assumptions
 ```

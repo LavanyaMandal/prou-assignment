@@ -1,0 +1,12 @@
+# Node
+node_modules/
+npm-debug.log*
+dist/
+
+# Env
+.env
+track2-backend-api/.env
+
+# Vite
+track3-frontend-fullstack/.vite/
+track3-frontend-fullstack/dist/
