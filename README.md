@@ -121,13 +121,13 @@ DELETE	/api/tasks/:id	Delete task
 ```
 
 ### 🟢 Dashboard Preview
-![Dashboard UI](./Screenshot/Dashboard.png)
+![Dashboard](./screenshots/Dashboard.png)
 
 ### 👥 Employees Management
-![Employees Page](./Screenshot/Employees.png)
+![Employees](./screenshots/Employees.png)
 
 ### 📋 Tasks Management
-![Tasks Page](./Screenshot/Tasks.png)
+![Tasks](./screenshots/Tasks.png)
 
 ```
 
