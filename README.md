@@ -1,4 +1,4 @@
-# 🧑‍💼 HR Management System – Employee & Task Dashboard
+# HR Management System – Employee & Task Dashboard
 
 This project is submitted for **Prou Assignment – Track 1, Track 2 & Track 3**.
 
