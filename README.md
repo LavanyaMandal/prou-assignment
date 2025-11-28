@@ -116,21 +116,6 @@ PUT	/api/tasks/:id	Update task
 DELETE	/api/tasks/:id	Delete task
 ```
 
-
-## 📸 Project Screenshots
-```
-
-### 🟢 Dashboard Preview  
-![Dashboard](./screenshots/Dashboard.png)
-
-### 👥 Employees Management  
-![Employees](./screenshots/Employees.png)
-
-### 📋 Tasks Management  
-![Tasks](./screenshots/Tasks.png)
-
-```
-
 ### Assumptions
 ```
 No authentication required
