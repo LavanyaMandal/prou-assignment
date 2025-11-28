@@ -3,19 +3,19 @@ import { useEffect, useState } from "react";
 const API_BASE = "http://localhost:5000/api";
 
 function App() {
-  // Employees
+  // Employees state
   const [employees, setEmployees] = useState([]);
   const [name, setName] = useState("");
   const [role, setRole] = useState("");
   const [email, setEmail] = useState("");
 
-  // Tasks
+  // Tasks state
   const [tasks, setTasks] = useState([]);
   const [taskTitle, setTaskTitle] = useState("");
   const [taskStatus, setTaskStatus] = useState("Pending");
   const [taskEmployeeId, setTaskEmployeeId] = useState("");
 
-  // Search
+  // UI
   const [search, setSearch] = useState("");
 
   useEffect(() => {
@@ -110,6 +110,16 @@ function App() {
     (e.name + e.role + e.email).toLowerCase().includes(search.toLowerCase())
   );
 
+  // Stats for top summary cards
+  const totalEmployees = employees.length;
+  const totalTasks = tasks.length;
+  const completedTasks = tasks.filter(
+    (t) => t.status === "Completed"
+  ).length;
+  const inProgressTasks = tasks.filter(
+    (t) => t.status === "In Progress"
+  ).length;
+
   const statusClass = (status) => {
     if (status === "Completed") return "badge badge-success";
     if (status === "In Progress") return "badge badge-warn";
@@ -121,22 +131,42 @@ function App() {
       <div className="app-shell">
         {/* Header */}
         <header className="app-header">
-          <div>
+          <div className="fade-in">
             <h1 className="app-title">EchoVerse HR Dashboard</h1>
             <p className="app-subtitle">
-              Track 3 • Fullstack: React + Node/Express + MongoDB Atlas
+              Track 3 • Fullstack: React &nbsp;·&nbsp; Express &nbsp;·&nbsp; MongoDB Atlas
             </p>
           </div>
-          <div className="pill">
-            Fullstack&nbsp;·&nbsp;Employees&nbsp;+&nbsp;Tasks
+          <div className="pill pulse">
+            Live • Employees & Tasks
           </div>
         </header>
 
+        {/* Stats row */}
+        <div className="stat-grid">
+          <div className="stat-card float-anim">
+            <span className="stat-label">Employees</span>
+            <span className="stat-value">{totalEmployees}</span>
+          </div>
+          <div className="stat-card float-anim delay-1">
+            <span className="stat-label">Total Tasks</span>
+            <span className="stat-value">{totalTasks}</span>
+          </div>
+          <div className="stat-card float-anim delay-2">
+            <span className="stat-label">In Progress</span>
+            <span className="stat-value">{inProgressTasks}</span>
+          </div>
+          <div className="stat-card float-anim delay-3">
+            <span className="stat-label">Completed</span>
+            <span className="stat-value">{completedTasks}</span>
+          </div>
+        </div>
+
         {/* Search */}
-        <div className="search-wrapper">
+        <div className="search-wrapper fade-up">
           <input
             className="input search-input"
-            placeholder="Search employees by name, role, email..."
+            placeholder="Search employees by name, role or email..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
@@ -145,7 +175,7 @@ function App() {
         {/* Main layout */}
         <div className="grid">
           {/* Left column – Employees */}
-          <div className="column">
+          <div className="column slide-left">
             <div className="card">
               <h2 className="card-title">Add Employee</h2>
               <div className="form-row">
@@ -201,7 +231,7 @@ function App() {
           </div>
 
           {/* Right column – Tasks */}
-          <div className="column">
+          <div className="column slide-right">
             <div className="card">
               <h2 className="card-title">Add Task</h2>
               <div className="form-col">
@@ -246,8 +276,11 @@ function App() {
                 <p className="empty-text">No tasks yet.</p>
               ) : (
                 <div className="task-list">
-                  {tasks.map((task) => (
-                    <div key={task._id} className="task-card">
+                  {tasks.map((task, index) => (
+                    <div
+                      key={task._id}
+                      className={`task-card fade-up delay-${index % 4}`}
+                    >
                       <div className="task-row">
                         <span className="task-title">{task.title}</span>
                         <span className={statusClass(task.status)}>
@@ -268,6 +301,10 @@ function App() {
             </div>
           </div>
         </div>
+
+        <footer className="app-footer">
+          <span>Built for Prou Internship Assessment • EchoVerse HR</span>
+        </footer>
       </div>
     </div>
   );
